@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AtleticoPlayers</string>
+
+    <string-array name="title_list">
+        <item>Order</item>
+        <item>Players</item>
+        <item>Result</item>
+        <item>Calender</item>
+        <item>A</item>
+        <item>B</item>
+    </string-array>
+</resources>
