@@ -41,7 +41,7 @@ class MainFragment : Fragment() {
                 val intent:Intent
                 when{
                      position == 0 ->{
-                         intent = Intent(requireContext(), FormationActivity::class.java).putExtra("position", position)
+                         intent = Intent(requireContext(), SquadActivity::class.java).putExtra("position", position)
                          startActivity(intent)
                      }
                 }

@@ -3,9 +3,9 @@ package com.example.atleticoplayers
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class FormationActivity : AppCompatActivity() {
+class SquadActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_formation)
+        setContentView(R.layout.activity_squad)
     }
 }

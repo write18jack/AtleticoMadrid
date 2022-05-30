@@ -7,7 +7,7 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
 
     //private lateinit var itemsViewModel: ItemsViewModel
-    private val orderFragment = FormationFragment()
+    private val orderFragment = SquadFragment()
 
     //val colors = listOf(R.drawable.gradient_1, R.drawable.gradient_6,
        // R.drawable.gradient_3, R.drawable.gradient_4, R.drawable.gradient_5, R.drawable.gradient_6)

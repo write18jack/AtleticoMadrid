@@ -3,7 +3,7 @@
     <string name="item">item</string>
 
     <string-array name="title_list">
-        <item>Order</item>
+        <item>Squad</item>
         <item>Players</item>
         <item>Result</item>
         <item>Calender</item>

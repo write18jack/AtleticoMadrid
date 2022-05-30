@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AtleticoPlayers">
         <activity
-            android:name=".FormationActivity"
+            android:name=".SquadActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
