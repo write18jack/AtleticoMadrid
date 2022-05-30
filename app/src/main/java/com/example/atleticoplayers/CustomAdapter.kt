@@ -1,56 +1,51 @@
 package com.example.atleticoplayers
 
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.atleticoplayers.ItemsViewModel
-import com.example.atleticoplayers.R
-import com.example.atleticoplayers.R.drawable.gradient_2
 
-class CustomAdapter(private val titleList: ArrayList<ItemsViewModel>): RecyclerView.Adapter<CustomAdapter.ViewHolder>(){
+class CustomAdapter(private val titleList: Array<String>): RecyclerView.Adapter<CustomAdapter.ViewHolder>(){
 
     //リスナを格納する変数を定義
-    private lateinit var listener: onCellClickListener
+    private lateinit var mlistener: onItemClickListener
 
     //create interface
-    interface onCellClickListener{
-        fun onItemClick(itemsViewModel: ItemsViewModel)
+    interface onItemClickListener{
+        fun onItemClick(position: Int)
     }
 
     //setリスナ
-    fun setOnCellClickListener(listener: onCellClickListener){
-        this.listener = listener
+    fun setOnCellClickListener(listener: onItemClickListener){
+        this.mlistener = listener
     }
 
-    class ViewHolder(ItemView:View):RecyclerView.ViewHolder(ItemView){
-        val textView:TextView = itemView.findViewById(R.id.textview)
+    //recyclcerviewのビューホルダークラス
+    class ViewHolder(ItemView:View, listener: onItemClickListener):RecyclerView.ViewHolder(ItemView){
+        val textView:TextView = ItemView.findViewById(R.id.textview)
+
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(absoluteAdapterPosition)
+            }
+        }
     }
 
     //layout設定
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_layout, parent, false)
-        return ViewHolder(view)
+        return ViewHolder(view, mlistener)
     }
 
     //view設定
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val itemsViewModel = titleList[position]
-        holder.textView.text = itemsViewModel.text
+        holder.textView.text = itemsViewModel
         //holder.LinearColor?.setBackgroundColor()
 
-        //セルがクリックイベントにリスナをセット
-        holder.itemView.setOnClickListener(){
-            listener.onItemClick(itemsViewModel)
-        }
     }
 
     //表示数設定

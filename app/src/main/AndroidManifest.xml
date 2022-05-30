@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AtleticoPlayers">
         <activity
+            android:name=".FormationActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

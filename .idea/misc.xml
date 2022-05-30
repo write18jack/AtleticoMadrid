@@ -14,7 +14,11 @@
         <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/drawable/gradient_3.xml" value="0.13148148148148148" />
         <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3385416666666667" />
         <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/drawable/snow_bg.xml" value="0.13148148148148148" />
-        <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/layout/activity_formation.xml" value="0.3223958333333333" />
+        <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/layout/activity_order.xml" value="0.3223958333333333" />
+        <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/layout/fragment_formation.xml" value="0.3223958333333333" />
+        <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/layout/fragment_main.xml" value="0.3223958333333333" />
         <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/layout/fragment_order.xml" value="0.3072916666666667" />
         <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/layout/item_layout.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/write/Documents/AtleticoPlayers/app/src/main/res/layout/new_item_layout.xml" value="0.35315101070154575" />
