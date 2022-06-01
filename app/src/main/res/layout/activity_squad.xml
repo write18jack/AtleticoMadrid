@@ -15,11 +15,11 @@
         app:layout_anchor="@+id/linearLayoutCompat"
         app:layout_anchorGravity="center">
 
-        <Button
+        <ImageButton
             android:id="@+id/sub_btn"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="SUB"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/substitute"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="10dp"
@@ -35,8 +35,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.520"
-            />
+            app:layout_constraintVertical_bias="0.520"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -44,12 +43,13 @@
         android:name="com.example.atleticoplayers.F442Fragment"
         android:id="@+id/fom_fra"
         android:layout_width="match_parent"
-        android:layout_height="610dp"
-        android:layout_marginTop="60dp" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp"/>
 
     <Spinner
         android:id="@+id/formation_spinner"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="50dp"
         app:layout_anchor="@+id/linearLayoutCompat"
         app:layout_anchorGravity="center" />
