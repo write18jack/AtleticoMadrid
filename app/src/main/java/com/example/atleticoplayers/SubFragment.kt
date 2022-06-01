@@ -5,12 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class F442Fragment : Fragment() {
+/**
+ * A simple [Fragment] subclass.
+ * Use the [SubFragment.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class SubFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -28,32 +34,24 @@ class F442Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val screen = inflater.inflate(R.layout.fragment_f442, container, false)
+        return inflater.inflate(R.layout.fragment_sub, container, false)
 
-        screen.findViewById<ImageButton>(R.id.lst).setOnClickListener(subbtn)
-        screen.findViewById<ImageButton>(R.id.rst).setOnClickListener()
-        val lm = screen.findViewById<ImageButton>(R.id.lm)
-        val lcm = screen.findViewById<ImageButton>(R.id.lcm)
-        val rcm = screen.findViewById<ImageButton>(R.id.rcm)
-        val rm = screen.findViewById<ImageButton>(R.id.rm)
-        val lfb = screen.findViewById<ImageButton>(R.id.lfb)
-        val lcb = screen.findViewById<ImageButton>(R.id.lcb)
-        val rcb = screen.findViewById<ImageButton>(R.id.rcb)
-        val rfb = screen.findViewById<ImageButton>(R.id.rfb)
-        val gk = screen.findViewById<ImageButton>(R.id.gk)
-
-        val subbtn = object: View.OnClickListener {
-
-
-        }
-
-        return screen
+        //lst.setBackgroundResource(R.drawable.felix1)
     }
 
     companion object {
+        /**
+         * Use this factory method to create a new instance of
+         * this fragment using the provided parameters.
+         *
+         * @param param1 Parameter 1.
+         * @param param2 Parameter 2.
+         * @return A new instance of fragment SubFragment.
+         */
+        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            F442Fragment().apply {
+            SubFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
