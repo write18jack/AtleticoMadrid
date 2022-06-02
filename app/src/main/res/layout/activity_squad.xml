@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -38,25 +39,24 @@
             app:layout_constraintVertical_bias="0.520"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.fragment.app.FragmentContainerView
-        android:name="com.example.atleticoplayers.F442Fragment"
-        android:id="@+id/fom_fra"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="50dp"/>
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/slide"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="60dp"/>
     <Spinner
         android:id="@+id/formation_spinner"
         android:layout_width="120dp"
         android:layout_height="50dp"
         app:layout_anchor="@+id/linearLayoutCompat"
         app:layout_anchorGravity="center" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:name="com.example.atleticoplayers.SquadFragment"
+        android:id="@+id/fom_fra"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/slide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="60dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_6"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".F442Fragment">
+    tools:context=".F532Fragment">
 
     <ImageButton
         android:id="@+id/lst"
@@ -14,8 +12,8 @@
         android:onClick="open_sub"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="80dp"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/rst"/>
 
@@ -25,21 +23,10 @@
         android:onClick="open_sub"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="80dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/lst"/>
-
-    <ImageButton
-        android:id="@+id/lm"
-        android:background="@drawable/no_player"
-        android:onClick="open_sub"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintTop_toBottomOf="@id/lst"
-        android:layout_marginTop="85dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="30dp"/>
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toEndOf="@id/lst"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
         android:id="@+id/lcm"
@@ -48,9 +35,10 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintTop_toBottomOf="@id/lst"
-        android:layout_marginTop="195dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toTopOf="@id/cdm"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/rcm"/>
+        android:layout_marginStart="60dp" />
 
     <ImageButton
         android:id="@+id/rcm"
@@ -59,20 +47,22 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintTop_toBottomOf="@id/rst"
-        android:layout_marginTop="195dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toTopOf="@id/cdm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/lcm"/>
+        android:layout_marginEnd="60dp"/>
 
     <ImageButton
-        android:id="@+id/rm"
+        android:id="@+id/cdm"
         android:background="@drawable/no_player"
         android:onClick="open_sub"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintTop_toBottomOf="@id/rst"
-        android:layout_marginTop="85dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="30dp"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <ImageButton
         android:id="@+id/lfb"
@@ -80,10 +70,11 @@
         android:onClick="open_sub"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintTop_toBottomOf="@id/lm"
-        android:layout_marginTop="160dp"
+        app:layout_constraintTop_toBottomOf="@id/lcm"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/lcb"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"/>
+        android:layout_marginStart="10dp"/>
 
     <ImageButton
         android:id="@+id/lcb"
@@ -94,6 +85,18 @@
         app:layout_constraintTop_toBottomOf="@id/lcm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cb"
+        android:layout_marginEnd="20dp"/>
+
+    <ImageButton
+        android:id="@+id/cb"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/cdm"
+        app:layout_constraintBottom_toBottomOf="@id/gk"
+        app:layout_constraintStart_toEndOf="@id/lcb"
         app:layout_constraintEnd_toStartOf="@id/rcb"/>
 
     <ImageButton
@@ -104,8 +107,9 @@
         android:layout_height="50dp"
         app:layout_constraintTop_toBottomOf="@id/rcm"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/lcb"/>
+        app:layout_constraintStart_toEndOf="@id/cb"
+        android:layout_marginStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
         android:id="@+id/rfb"
@@ -113,10 +117,11 @@
         android:onClick="open_sub"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintTop_toBottomOf="@id/rm"
-        android:layout_marginTop="160dp"
+        app:layout_constraintTop_toBottomOf="@id/rcm"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/rcb"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="20dp"/>
+        android:layout_marginEnd="10dp"/>
 
     <ImageButton
         android:id="@+id/gk"
@@ -125,7 +130,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

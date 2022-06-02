@@ -12,9 +12,6 @@ import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment() {
 
-    private var layoutIManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>? = null
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,7 +37,7 @@ class MainFragment : Fragment() {
             override fun onItemClick(position: Int) {
                 val intent:Intent
                 when{
-                     position == 0 ->{
+                     position == 0 -> {
                          intent = Intent(requireContext(), SquadActivity::class.java).putExtra("position", position)
                          startActivity(intent)
                      }

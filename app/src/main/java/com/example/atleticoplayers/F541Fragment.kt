@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class SubFragment : Fragment() {
+class F541Fragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +17,6 @@ class SubFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sub, container, false)
-
-        //lst.setBackgroundResource(R.drawable.felix1)
+        return inflater.inflate(R.layout.fragment_f541, container, false)
     }
 }

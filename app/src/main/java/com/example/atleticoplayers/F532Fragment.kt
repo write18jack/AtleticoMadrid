@@ -6,7 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class SubFragment : Fragment() {
+class F532Fragment : Fragment() {
+
+    private lateinit var xlistener: CustomAdapter.onItemClickListener
+
+    interface onItemClickListener{
+        fun onItemClick(view: View)
+    }
+
+    fun setOnButtonClickListener(listener: onItemClickListener){
+        this.xlistener = listener
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +27,11 @@ class SubFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sub, container, false)
+        val view : View = inflater.inflate(R.layout.fragment_f532, container, false)
 
-        //lst.setBackgroundResource(R.drawable.felix1)
+        view.setOnClickListener{
+
+        }
+        return view
     }
 }

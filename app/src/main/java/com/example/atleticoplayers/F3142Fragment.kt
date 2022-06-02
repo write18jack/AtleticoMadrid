@@ -6,11 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import androidx.fragment.app.FragmentManager
-import kotlinx.android.synthetic.main.fragment_f442.*
-import kotlinx.android.synthetic.main.fragment_f442.view.*
 
-class F442Fragment : Fragment(){
+class F3142Fragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,9 +16,9 @@ class F442Fragment : Fragment(){
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         // Inflate the layout for this fragment
-        val view: View = inflater.inflate(R.layout.fragment_f442, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_f3142, container, false)
 
         val lst = view.findViewById<ImageButton>(R.id.lst)
         lst.setOnClickListener {
@@ -65,8 +62,8 @@ class F442Fragment : Fragment(){
                 .replace(R.id.slide, SubFragment()).commit()
         }
 
-        val lfb = view.findViewById<ImageButton>(R.id.lfb)
-        lfb.setOnClickListener {
+        val cdm = view.findViewById<ImageButton>(R.id.cdm)
+        cdm.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .addToBackStack(null)
                 .replace(R.id.slide, SubFragment()).commit()
@@ -79,15 +76,15 @@ class F442Fragment : Fragment(){
                 .replace(R.id.slide, SubFragment()).commit()
         }
 
-        val rcb = view.findViewById<ImageButton>(R.id.rcb)
-        rcb.setOnClickListener {
+        val cb = view.findViewById<ImageButton>(R.id.cb)
+        cb.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .addToBackStack(null)
                 .replace(R.id.slide, SubFragment()).commit()
         }
 
-        val rfb = view.findViewById<ImageButton>(R.id.rfb)
-        rfb.setOnClickListener {
+        val rcb = view.findViewById<ImageButton>(R.id.rcb)
+        rcb.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .addToBackStack(null)
                 .replace(R.id.slide, SubFragment()).commit()
