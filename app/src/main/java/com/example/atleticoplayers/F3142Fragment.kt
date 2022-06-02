@@ -21,80 +21,28 @@ class F3142Fragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_f3142, container, false)
 
         val lst = view.findViewById<ImageButton>(R.id.lst)
-        lst.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }
-
         val rst = view.findViewById<ImageButton>(R.id.rst)
-        rst.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }
-
         val lm = view.findViewById<ImageButton>(R.id.lm)
-        lm.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }
-
         val lcm = view.findViewById<ImageButton>(R.id.lcm)
-        lcm.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }
-
         val rcm = view.findViewById<ImageButton>(R.id.rcm)
-        rcm.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }
-
         val rm = view.findViewById<ImageButton>(R.id.rm)
-        rm.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }
-
         val cdm = view.findViewById<ImageButton>(R.id.cdm)
-        cdm.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }
-
         val lcb = view.findViewById<ImageButton>(R.id.lcb)
-        lcb.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }
-
         val cb = view.findViewById<ImageButton>(R.id.cb)
-        cb.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }
-
         val rcb = view.findViewById<ImageButton>(R.id.rcb)
-        rcb.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }
-
         val gk = view.findViewById<ImageButton>(R.id.gk)
-        gk.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
+
+        val id_list = listOf<ImageButton>(lst, rst, lm, lcm, rcm, rm, cdm, lcb, cb, rcb, gk)
+
+
+        view.setOnClickListener{
+            for (i in id_list){
+                if (view == i){
+                    parentFragmentManager.beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.slide, SubFragment()).commit()
+                }
+            }
         }
         return view
     }
