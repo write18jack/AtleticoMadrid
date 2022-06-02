@@ -20,14 +20,6 @@ class SubFragment : Fragment() {
         // Inflate the layout for this fragment
         val view:View = inflater.inflate(R.layout.fragment_sub, container, false)
 
-        val playerList = listOf<Players>(
-            Players(R.drawable.gimenez),
-            Players(R.drawable.felix1),
-            Players(R.drawable.savic),
-            Players(R.drawable.griezmann),
-            Players(R.drawable.depaul)
-        )
-
         recycler_view.adapter =
 
 
