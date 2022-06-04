@@ -15,11 +15,13 @@ class SubRecyclerAdapter:RecyclerView.Adapter<SubRecyclerAdapter.ViewHolderItem>
     }
 
     private val playerList = listOf(
-        R.drawable.gimenez,
-        R.drawable.felix1,
-        R.drawable.savic,
+        R.drawable.felix,
         R.drawable.griezmann,
-        R.drawable.depaul
+        R.drawable.depaul,
+        R.drawable.lodi,
+        R.drawable.reinildo,
+        R.drawable.gimenez,
+        R.drawable.savic
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderItem {

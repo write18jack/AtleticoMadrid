@@ -1,14 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/pitch"
     tools:context=".F541Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageButton
+        android:id="@+id/st"
+        android:background="@drawable/no_player"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/lm"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/st"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"/>
+
+    <ImageButton
+        android:id="@+id/lcm"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/st"
+        android:layout_marginTop="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rcm"/>
+
+    <ImageButton
+        android:id="@+id/rcm"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/st"
+        android:layout_marginTop="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lcm"/>
+
+    <ImageButton
+        android:id="@+id/rm"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/st"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"/>
+
+    <ImageButton
+        android:id="@+id/lfb"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/lcm"
+        android:layout_marginTop="-30dp"
+        app:layout_constraintBottom_toTopOf="@id/lcb"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"/>
+
+    <ImageButton
+        android:id="@+id/lcb"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/lcm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cb"
+        android:layout_marginEnd="20dp"/>
+
+    <ImageButton
+        android:id="@+id/cb"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/st"
+        android:layout_marginTop="270dp"
+        app:layout_constraintBottom_toBottomOf="@id/gk"
+        app:layout_constraintStart_toEndOf="@id/lcb"
+        app:layout_constraintEnd_toStartOf="@id/rcb"/>
+
+    <ImageButton
+        android:id="@+id/rcb"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/rcm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cb"
+        android:layout_marginStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/rfb"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/rcm"
+        android:layout_marginTop="-30dp"
+        app:layout_constraintBottom_toTopOf="@id/rcb"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"/>
+
+    <ImageButton
+        android:id="@+id/gk"
+        android:background="@drawable/no_player"
+        android:onClick="open_sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
