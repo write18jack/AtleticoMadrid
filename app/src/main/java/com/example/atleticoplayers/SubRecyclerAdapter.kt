@@ -14,12 +14,12 @@ class SubRecyclerAdapter:RecyclerView.Adapter<SubRecyclerAdapter.ViewHolderItem>
         val itemImageButton:ImageButton = itemView.findViewById(R.id.palayer)
     }
 
-    private val playerList = listOf<Players>(
-        Players(R.drawable.gimenez),
-        Players(R.drawable.felix1),
-        Players(R.drawable.savic),
-        Players(R.drawable.griezmann),
-        Players(R.drawable.depaul)
+    private val playerList = listOf(
+        R.drawable.gimenez,
+        R.drawable.felix1,
+        R.drawable.savic,
+        R.drawable.griezmann,
+        R.drawable.depaul
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderItem {
@@ -30,12 +30,8 @@ class SubRecyclerAdapter:RecyclerView.Adapter<SubRecyclerAdapter.ViewHolderItem>
     }
 
     override fun onBindViewHolder(holder: ViewHolderItem, position: Int) {
-
+        holder.itemImageButton.setImageResource(playerList[position])
     }
 
-
-
-
-
-
+    override fun getItemCount() = playerList.size
 }

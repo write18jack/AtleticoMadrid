@@ -45,15 +45,19 @@ class SquadActivity : AppCompatActivity() {
                         when(position){
                             0 -> {
                                 supportFragmentManager.beginTransaction()
-                                .addToBackStack(null)
-                                .replace(R.id.fom_fra, F3142Fragment()).commit()
+                                    .addToBackStack(null)
+                                    .replace(R.id.fom_fra, F3142Fragment()).commit()
                             }
                             1 -> {
                                 supportFragmentManager.beginTransaction()
                                     .addToBackStack(null)
                                     .replace(R.id.fom_fra, F442Fragment()).commit()
                             }
-                            2 -> {}
+                            2 -> {
+                                supportFragmentManager.beginTransaction()
+                                    .addToBackStack(null)
+                                    .replace(R.id.fom_fra, F532Fragment()).commit()
+                            }
                             3 -> {}
                         }
                     }
