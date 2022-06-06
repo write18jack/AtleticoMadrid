@@ -6,17 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import com.example.atleticoplayers.databinding.FragmentF532Binding
+import com.example.atleticoplayers.databinding.FragmentSubBinding
 
 class F532Fragment : Fragment() {
-    
+
+    private var _binding: FragmentF532Binding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view : View = inflater.inflate(R.layout.fragment_f532, container, false)
+        _binding = FragmentF532Binding.inflate(inflater, container, false)
 
-        val lst = view.findViewById<ImageButton>(R.id.lst)
+
+        binding.lst.setOnClickListener{onTosub(it)}
         val rst = view.findViewById<ImageButton>(R.id.rst)
         val lcm = view.findViewById<ImageButton>(R.id.lcm)
         val rcm = view.findViewById<ImageButton>(R.id.rcm)
@@ -30,6 +36,13 @@ class F532Fragment : Fragment() {
 
         val id_list = listOf<ImageButton>(lst, rst, lcm, rcm, cdm, lfb, lcb, cb, rcb, rfb, gk)
 
+        fun onTosub(view: View?){
+            view.
+            parentFragmentManager.beginTransaction()
+                .addToBackStack(null)
+                .replace(R.id.slide, SubFragment().new).commit()
+        }
+
 
         view.setOnClickListener{
             for (i in id_list){
@@ -40,6 +53,6 @@ class F532Fragment : Fragment() {
                 }
             }
         }
-        return view
+        return binding.root
     }
 }
