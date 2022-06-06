@@ -22,6 +22,7 @@ class SquadActivity : AppCompatActivity() {
         val back_btn: ImageButton = findViewById(R.id.back_btn)
         back_btn.setOnClickListener{
             intent = Intent(this, MainActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
         }
 
@@ -45,20 +46,20 @@ class SquadActivity : AppCompatActivity() {
                         when(position){
                             0 -> {
                                 supportFragmentManager.beginTransaction()
-                                    .addToBackStack(null)
                                     .replace(R.id.fom_fra, F3142Fragment()).commit()
                             }
                             1 -> {
                                 supportFragmentManager.beginTransaction()
-                                    .addToBackStack(null)
                                     .replace(R.id.fom_fra, F442Fragment()).commit()
                             }
                             2 -> {
                                 supportFragmentManager.beginTransaction()
-                                    .addToBackStack(null)
                                     .replace(R.id.fom_fra, F532Fragment()).commit()
                             }
-                            3 -> {}
+                            3 -> {
+                                supportFragmentManager.beginTransaction()
+                                    .replace(R.id.fom_fra, F541Fragment()).commit()
+                            }
                         }
                     }
                 override fun onNothingSelected(p0: AdapterView<*>?) {
