@@ -1,14 +1,10 @@
 package com.example.atleticoplayers
 
-import android.app.Activity
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.ViewParent
 import android.widget.*
-import java.text.FieldPosition
 
 class SquadActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,36 +32,42 @@ class SquadActivity : AppCompatActivity() {
 
         //spinner choose formation
         val spinner = findViewById<Spinner>(R.id.formation_spinner)
-        if (spinner != null){
-            val adapter = ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line, formations)
+        if (spinner != null) {
+            val adapter =
+                ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, formations)
             spinner.adapter = adapter
 
             spinner.onItemSelectedListener = object :
-                AdapterView.OnItemSelectedListener{
-                    override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long){
-                        when(position){
-                            0 -> {
-                                supportFragmentManager.beginTransaction()
-                                    .replace(R.id.fom_fra, F3142Fragment()).commit()
-                            }
-                            1 -> {
-                                supportFragmentManager.beginTransaction()
-                                    .replace(R.id.fom_fra, F442Fragment()).commit()
-                            }
-                            2 -> {
-                                supportFragmentManager.beginTransaction()
-                                    .replace(R.id.fom_fra, F532Fragment()).commit()
-                            }
-                            3 -> {
-                                supportFragmentManager.beginTransaction()
-                                    .replace(R.id.fom_fra, F541Fragment()).commit()
-                            }
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View,
+                    position: Int,
+                    id: Long
+                ) {
+                    when (position) {
+                        0 -> {
+                            supportFragmentManager.beginTransaction()
+                                .replace(R.id.fom_fra, F3142Fragment()).commit()
+                        }
+                        1 -> {
+                            supportFragmentManager.beginTransaction()
+                                .replace(R.id.fom_fra, F442Fragment()).commit()
+                        }
+                        2 -> {
+                            supportFragmentManager.beginTransaction()
+                                .replace(R.id.fom_fra, F532Fragment()).commit()
+                        }
+                        3 -> {
+                            supportFragmentManager.beginTransaction()
+                                .replace(R.id.fom_fra, F541Fragment()).commit()
                         }
                     }
+                }
                 override fun onNothingSelected(p0: AdapterView<*>?) {
                 }
-                }
+            }
         }
     }
-
 }
+

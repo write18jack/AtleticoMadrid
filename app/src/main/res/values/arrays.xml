@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="title_list">
+        <item>Squad</item>
+        <item>Players</item>
+        <item>Result</item>
+        <item>Calender</item>
+        <item>A</item>
+        <item>B</item>
+    </string-array>
+
+    <string-array name="formations">
+        <item>3-1-4-2</item>
+        <item>4-4-2</item>
+        <item>5-3-2</item>
+        <item>5-4-1</item>
+    </string-array>
+
+</resources>

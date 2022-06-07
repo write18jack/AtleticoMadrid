@@ -20,7 +20,6 @@ class SubFragment : Fragment() {
     private var _binding: FragmentSubBinding? = null
     private val binding get() = _binding!!
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,7 +33,6 @@ class SubFragment : Fragment() {
 
         recyclerView.adapter = adapter
 
-
         //lst.setBackgroundResource(R.drawable.felix1)
         return binding.root
     }
@@ -45,7 +43,13 @@ class SubFragment : Fragment() {
            layoutManager = GridLayoutManager(requireActivity(), 2)
         }
 
+        val args = arguments?.getInt("KEY")
 
 
+
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
