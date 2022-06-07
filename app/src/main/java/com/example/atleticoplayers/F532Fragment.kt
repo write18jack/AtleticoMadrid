@@ -19,10 +19,10 @@ class F532Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentF532Binding.inflate(inflater, container, false)
+       /* _binding = FragmentF532Binding.inflate(inflater, container, false)
 
 
-        binding.lst.setOnClickListener{onTosub(it)}
+        binding.lst.setOnClickListener{onTosub()}
         val rst = view.findViewById<ImageButton>(R.id.rst)
         val lcm = view.findViewById<ImageButton>(R.id.lcm)
         val rcm = view.findViewById<ImageButton>(R.id.rcm)
@@ -34,25 +34,13 @@ class F532Fragment : Fragment() {
         val rfb = view.findViewById<ImageButton>(R.id.rfb)
         val gk = view.findViewById<ImageButton>(R.id.gk)
 
-        val id_list = listOf<ImageButton>(lst, rst, lcm, rcm, cdm, lfb, lcb, cb, rcb, rfb, gk)
+        //val id_list = listOf<ImageButton>(lst, rst, lcm, rcm, cdm, lfb, lcb, cb, rcb, rfb, gk)
 
-        fun onTosub(view: View?){
-            view.
+        fun onTosub(){
             parentFragmentManager.beginTransaction()
                 .addToBackStack(null)
-                .replace(R.id.slide, SubFragment().new).commit()
-        }
-
-
-        view.setOnClickListener{
-            for (i in id_list){
-                if (view == i){
-                    parentFragmentManager.beginTransaction()
-                        .addToBackStack(null)
-                        .replace(R.id.slide, SubFragment()).commit()
-                }
-            }
-        }
+                .replace(R.id.slide, SubFragment()).commit()
+        }*/
         return binding.root
     }
 }
