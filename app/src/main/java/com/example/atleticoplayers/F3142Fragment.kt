@@ -34,7 +34,6 @@ class F3142Fragment : Fragment() {
 
         val id_list = listOf<ImageButton>(lst, rst, lm, lcm, rcm, rm, cdm, lcb, cb, rcb, gk)
 
-
         view.setOnClickListener{
             for (i in id_list){
                 if (view == i){

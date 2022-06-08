@@ -19,7 +19,7 @@ class F532Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentF532Binding.inflate(inflater, container, false)
+       /* _binding = FragmentF532Binding.inflate(inflater, container, false)
 
 
 
