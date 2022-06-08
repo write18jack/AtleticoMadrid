@@ -19,7 +19,7 @@ class F532Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-       /* _binding = FragmentF532Binding.inflate(inflater, container, false)
+         _binding = FragmentF532Binding.inflate(inflater, container, false)
 
 
 
@@ -30,21 +30,21 @@ class F532Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.lst.setOnClickListener{onTosub(lst)}
-        binding.rst.setOnClickListener{onTosub(rst)}
-        binding.lcm.setOnClickListener{onTosub(lcm)}
-        binding.rcm.setOnClickListener{onTosub(rcm)}
-        binding.cdm.setOnClickListener{onTosub(cdm)}
-        binding.lfb.setOnClickListener{onTosub(lfb)}
-        binding.lcb.setOnClickListener{onTosub(lcb)}
-        binding.cb.setOnClickListener{onTosub(cb)}
-        binding.rcb.setOnClickListener{onTosub(rcb)}
-        binding.rfb.setOnClickListener{onTosub(rfb)}
-        binding.gk.setOnClickListener{onTosub(gk)}
+        binding.lst.setOnClickListener{onToSub(lst)}
+        binding.rst.setOnClickListener{onToSub(rst)}
+        binding.lcm.setOnClickListener{onToSub(lcm)}
+        binding.rcm.setOnClickListener{onToSub(rcm)}
+        binding.cdm.setOnClickListener{onToSub(cdm)}
+        binding.lfb.setOnClickListener{onToSub(lfb)}
+        binding.lcb.setOnClickListener{onToSub(lcb)}
+        binding.cb.setOnClickListener{onToSub(cb)}
+        binding.rcb.setOnClickListener{onToSub(rcb)}
+        binding.rfb.setOnClickListener{onToSub(rfb)}
+        binding.gk.setOnClickListener{onToSub(gk)}
 
     }
 
-    private fun onTosub(view: ImageButton) {
+    private fun onToSub(view: ImageButton) {
         val id:Int = view.id
         val bundle = Bundle()
         bundle.putInt("KEY",id)
@@ -56,6 +56,7 @@ class F532Fragment : Fragment() {
             .add(R.id.slide, fragment)
             .commit()
     }
+
 
     override fun onDestroyView(){
 

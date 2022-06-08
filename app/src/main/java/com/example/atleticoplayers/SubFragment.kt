@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CursorAdapter
 import android.widget.ImageButton
+import androidx.core.os.bundleOf
+import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,11 +48,16 @@ class SubFragment : Fragment() {
         sub_recycler.apply {
            layoutManager = GridLayoutManager(requireActivity(), 2)
         }
-
-
-
-
     }
+
+    private fun onTOTap(view: Int){
+        setFragmentResult("key", bundleOf("data" to view))
+        parentFragmentManager.beginTransaction()
+            .addToBackStack(null)
+            .replace(R.id.fom_fra, F442Fragment())
+            .commit()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

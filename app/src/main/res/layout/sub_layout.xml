@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="180dp"
     android:layout_height="290dp"
-    android:id="@+id/palayer"
+    android:id="@+id/card_palayer"
     android:scaleType="centerCrop">
 </ImageButton>
 

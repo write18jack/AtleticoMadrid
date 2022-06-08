@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.setFragmentResultListener
 import com.example.atleticoplayers.databinding.FragmentF442Binding
 
 class F442Fragment : Fragment(){
@@ -18,6 +19,11 @@ class F442Fragment : Fragment(){
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentF442Binding.inflate(inflater, container, false)
+
+        setFragmentResultListener("key"){requestKey, bundle ->
+            val result = bundle.getInt("data")
+            binding.lst.setBackgroundResource(result)
+        }
 
         return binding.root
     }

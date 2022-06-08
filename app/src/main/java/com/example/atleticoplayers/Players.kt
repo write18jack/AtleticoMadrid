@@ -1,5 +1,5 @@
 package com.example.atleticoplayers
 
 data class Players(
-    val image: Int
+    val players: Int
 )
