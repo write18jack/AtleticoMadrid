@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import com.example.atleticoplayers.databinding.FragmentF532Binding
-import com.example.atleticoplayers.databinding.FragmentSubBinding
+import kotlinx.android.synthetic.main.fragment_f532.*
 
 class F532Fragment : Fragment() {
 
@@ -22,25 +22,44 @@ class F532Fragment : Fragment() {
        /* _binding = FragmentF532Binding.inflate(inflater, container, false)
 
 
-        binding.lst.setOnClickListener{onTosub()}
-        val rst = view.findViewById<ImageButton>(R.id.rst)
-        val lcm = view.findViewById<ImageButton>(R.id.lcm)
-        val rcm = view.findViewById<ImageButton>(R.id.rcm)
-        val cdm = view.findViewById<ImageButton>(R.id.cdm)
-        val lfb = view.findViewById<ImageButton>(R.id.lfb)
-        val lcb = view.findViewById<ImageButton>(R.id.lcb)
-        val cb = view.findViewById<ImageButton>(R.id.cb)
-        val rcb = view.findViewById<ImageButton>(R.id.rcb)
-        val rfb = view.findViewById<ImageButton>(R.id.rfb)
-        val gk = view.findViewById<ImageButton>(R.id.gk)
 
-        //val id_list = listOf<ImageButton>(lst, rst, lcm, rcm, cdm, lfb, lcb, cb, rcb, rfb, gk)
 
-        fun onTosub(){
-            parentFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.slide, SubFragment()).commit()
-        }*/
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.lst.setOnClickListener{onTosub(lst)}
+        binding.rst.setOnClickListener{onTosub(rst)}
+        binding.lcm.setOnClickListener{onTosub(lcm)}
+        binding.rcm.setOnClickListener{onTosub(rcm)}
+        binding.cdm.setOnClickListener{onTosub(cdm)}
+        binding.lfb.setOnClickListener{onTosub(lfb)}
+        binding.lcb.setOnClickListener{onTosub(lcb)}
+        binding.cb.setOnClickListener{onTosub(cb)}
+        binding.rcb.setOnClickListener{onTosub(rcb)}
+        binding.rfb.setOnClickListener{onTosub(rfb)}
+        binding.gk.setOnClickListener{onTosub(gk)}
+
+    }
+
+    private fun onTosub(view: ImageButton) {
+        val id:Int = view.id
+        val bundle = Bundle()
+        bundle.putInt("KEY",id)
+        val fragment = SubFragment()
+        fragment.arguments = bundle
+
+        parentFragmentManager.beginTransaction()
+            .addToBackStack(null)
+            .add(R.id.slide, fragment)
+            .commit()
+    }
+
+    override fun onDestroyView(){
+
+        super.onDestroyView()
+        _binding = null
     }
 }

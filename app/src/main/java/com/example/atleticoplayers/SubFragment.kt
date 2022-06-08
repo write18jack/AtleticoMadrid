@@ -21,7 +21,7 @@ class SubFragment : Fragment() {
 
     private var _binding: FragmentSubBinding? = null
     private val binding get() = _binding!!
-    private lateinit var bindingx: FragmentF442Binding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,8 +36,6 @@ class SubFragment : Fragment() {
 
         recyclerView.adapter = adapter
 
-
-
         //lst.setBackgroundResource(R.drawable.felix1)
         return binding.root
     }
@@ -49,9 +47,12 @@ class SubFragment : Fragment() {
            layoutManager = GridLayoutManager(requireActivity(), 2)
         }
 
-        binding.subRecycler.setOnClickListener {
-            bindingx.lst.setBackgroundResource(R.drawable.depaul)
-        }
 
+
+
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
