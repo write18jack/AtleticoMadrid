@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CursorAdapter
 import android.widget.ImageButton
+import androidx.core.os.bundleOf
+import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,12 +32,33 @@ class SubFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentSubBinding.inflate(inflater, container, false)
 
+        val playerList = listOf(
+            R.drawable.felix,
+            R.drawable.griezmann,
+            R.drawable.depaul,
+            R.drawable.lodi,
+            R.drawable.reinildo,
+            R.drawable.gimenez,
+            R.drawable.savic
+        )
+
+
         val recyclerView = binding.subRecycler
 
-        val adapter = SubRecyclerAdapter()
+        val adapter = SubRecyclerAdapter(playerList)
 
         recyclerView.adapter = adapter
 
+        adapter.setOnCellClickListener(object : SubRecyclerAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+
+                /*val fragment = F442Fragment()
+                fragment.setFragmentResult("KEY", bundleOf(
+                    "result_key1" to position
+                ))*/
+                parentFragmentManager.beginTransaction().replace(R.id.fom_fra, F442Fragment())
+            }
+        })
 
 
         //lst.setBackgroundResource(R.drawable.felix1)

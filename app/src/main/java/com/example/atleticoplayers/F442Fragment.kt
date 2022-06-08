@@ -5,12 +5,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.setFragmentResultListener
 import com.example.atleticoplayers.databinding.FragmentF442Binding
+import com.example.atleticoplayers.databinding.FragmentSubBinding
 
 class F442Fragment : Fragment(){
 
     private var _binding: FragmentF442Binding? = null
     private val binding get() = _binding!!
+
+    val playerList = listOf(
+        R.drawable.felix,
+        R.drawable.griezmann,
+        R.drawable.depaul,
+        R.drawable.lodi,
+        R.drawable.reinildo,
+        R.drawable.gimenez,
+        R.drawable.savic
+    )
+
+
+    private lateinit var xbinding:FragmentSubBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,6 +34,11 @@ class F442Fragment : Fragment(){
         // Inflate the layout for this fragment
         _binding = FragmentF442Binding.inflate(inflater, container, false)
 
+        /*setFragmentResultListener("KEY"){ requestKey, bundle ->
+            val result1 = bundle.getInt("result_key1")
+            binding.lst.setBackgroundResource(playerList[result1])
+
+        }*/
         return binding.root
     }
 
