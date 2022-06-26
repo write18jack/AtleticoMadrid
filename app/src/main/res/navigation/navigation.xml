@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.atleticoplayers.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_squadFragment"
+            app:destination="@id/squadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/f3142Fragment"
+        android:name="com.example.atleticoplayers.formations.F3142Fragment"
+        android:label="fragment_f3142"
+        tools:layout="@layout/fragment_f3142" >
+        <action
+            android:id="@+id/action_f3142Fragment_to_squadFragment"
+            app:destination="@id/squadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/f442Fragment"
+        android:name="com.example.atleticoplayers.formations.F442Fragment"
+        android:label="fragment_f442"
+        tools:layout="@layout/fragment_f442" >
+        <action
+            android:id="@+id/action_f442Fragment_to_squadFragment"
+            app:destination="@id/squadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/f532Fragment"
+        android:name="com.example.atleticoplayers.formations.F532Fragment"
+        android:label="fragment_f532"
+        tools:layout="@layout/fragment_f532" >
+        <action
+            android:id="@+id/action_f532Fragment_to_squadFragment"
+            app:destination="@id/squadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/f541Fragment"
+        android:name="com.example.atleticoplayers.formations.F541Fragment"
+        android:label="fragment_f541"
+        tools:layout="@layout/fragment_f541" >
+        <action
+            android:id="@+id/action_f541Fragment_to_squadFragment"
+            app:destination="@id/squadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subFragment"
+        android:name="com.example.atleticoplayers.SubFragment"
+        android:label="fragment_sub"
+        tools:layout="@layout/fragment_sub" >
+        <action
+            android:id="@+id/action_subFragment_to_squadFragment"
+            app:destination="@id/squadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/squadFragment"
+        android:name="com.example.atleticoplayers.squad.SquadFragment"
+        android:label="SquadFragment" >
+        <action
+            android:id="@+id/action_squadFragment_to_f3142Fragment"
+            app:destination="@id/f3142Fragment" />
+        <action
+            android:id="@+id/action_squadFragment_to_f442Fragment"
+            app:destination="@id/f442Fragment" />
+        <action
+            android:id="@+id/action_squadFragment_to_f532Fragment"
+            app:destination="@id/f532Fragment" />
+        <action
+            android:id="@+id/action_squadFragment_to_f541Fragment"
+            app:destination="@id/f541Fragment" />
+        <action
+            android:id="@+id/action_squadFragment_to_subFragment"
+            app:destination="@id/subFragment" />
+        <action
+            android:id="@+id/action_squadFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+
+</navigation>

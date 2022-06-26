@@ -15,16 +15,13 @@ class CustomAdapter(private val titleList: Array<String>): RecyclerView.Adapter<
     interface onItemClickListener{
         fun onItemClick(position: Int)
     }
-
     //setリスナ
     fun setOnCellClickListener(listener: onItemClickListener){
         this.mlistener = listener
     }
-
     //recyclcerviewのビューホルダークラス
     class ViewHolder(ItemView:View, listener: onItemClickListener):RecyclerView.ViewHolder(ItemView){
         val textView:TextView = ItemView.findViewById(R.id.textview)
-
         init {
             itemView.setOnClickListener {
                 listener.onItemClick(absoluteAdapterPosition)

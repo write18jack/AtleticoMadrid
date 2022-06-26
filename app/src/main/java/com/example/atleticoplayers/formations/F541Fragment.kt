@@ -1,44 +1,41 @@
-package com.example.atleticoplayers
+package com.example.atleticoplayers.formations
 
-import android.os.Bundle
 import androidx.fragment.app.Fragment
+import android.os.Bundle
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.setFragmentResultListener
-import com.example.atleticoplayers.databinding.FragmentF442Binding
+import com.example.atleticoplayers.R
+import com.example.atleticoplayers.SubFragment
+import com.example.atleticoplayers.databinding.FragmentF541Binding
 
-class F442Fragment : Fragment(){
+class F541Fragment : Fragment() {
 
-    private var _binding: FragmentF442Binding? = null
+    private var _binding: FragmentF541Binding? = null
     private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentF442Binding.inflate(inflater, container, false)
-
-        setFragmentResultListener("key"){requestKey, bundle ->
-            val result = bundle.getInt("data")
-            binding.lst.setBackgroundResource(result)
-        }
-
+        _binding = FragmentF541Binding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.lst.setOnClickListener{onToSub()}
-        binding.rst.setOnClickListener{onToSub()}
+        binding.st.setOnClickListener{onToSub()}
         binding.lm.setOnClickListener{onToSub()}
         binding.lcm.setOnClickListener{onToSub()}
         binding.rcm.setOnClickListener{onToSub()}
-        binding.lm.setOnClickListener{onToSub()}
+        binding.rm.setOnClickListener{onToSub()}
         binding.lfb.setOnClickListener{onToSub()}
         binding.lcb.setOnClickListener{onToSub()}
+        binding.cb.setOnClickListener{onToSub()}
         binding.rcb.setOnClickListener{onToSub()}
         binding.rfb.setOnClickListener{onToSub()}
         binding.gk.setOnClickListener{onToSub()}

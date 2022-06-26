@@ -1,4 +1,4 @@
-package com.example.atleticoplayers
+package com.example.atleticoplayers.formations
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import com.example.atleticoplayers.R
+import com.example.atleticoplayers.SubFragment
 
 class F3142Fragment : Fragment() {
 

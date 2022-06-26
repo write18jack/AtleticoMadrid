@@ -5,19 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CursorAdapter
-import android.widget.ImageButton
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
-import androidx.fragment.app.setFragmentResultListener
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.atleticoplayers.databinding.FragmentF442Binding
 import com.example.atleticoplayers.databinding.FragmentSubBinding
-import kotlinx.android.synthetic.main.fragment_main.*
+import com.example.atleticoplayers.formations.F442Fragment
 import kotlinx.android.synthetic.main.fragment_sub.*
-import java.text.FieldPosition
 
 class SubFragment : Fragment() {
 
@@ -50,13 +43,13 @@ class SubFragment : Fragment() {
         }
     }
 
-    private fun onTOTap(view: Int){
+    /*private fun onTOTap(view: Int){
         setFragmentResult("key", bundleOf("data" to view))
         parentFragmentManager.beginTransaction()
             .addToBackStack(null)
             .replace(R.id.fom_fra, F442Fragment())
             .commit()
-    }
+    }*/
 
     override fun onDestroyView() {
         super.onDestroyView()

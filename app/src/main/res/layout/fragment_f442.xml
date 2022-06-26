@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/pitch"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".F442Fragment">
+    tools:context=".formations.F442Fragment">
 
     <ImageButton
         android:id="@+id/lst"
